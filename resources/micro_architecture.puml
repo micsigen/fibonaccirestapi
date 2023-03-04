@@ -1,0 +1,21 @@
+@startuml name "System diagram"
+
+rectangle "Fibonacci test" #whitesmoke {
+
+  rectangle [Browser <&browser>] as browser
+
+  [UI] as ui #gold
+  package "fibonacci-app" #lightblue {
+      () "GET /fibonacci?n={n}" as query_endpoint #magenta
+      [Controller layer] as controller
+      [Business service] as service
+      query_endpoint -- controller
+      controller -- service
+      note right: f(n) = f(n - 1) + f(n - 2)
+  }
+
+  browser -down. ui
+
+  ui -down-( query_endpoint
+}
+@enduml
