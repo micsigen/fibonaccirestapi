@@ -28,13 +28,13 @@ f(6) = 5
 # What You Need
 
 - Create a GitHub account if you do not have yet: https://github.com/signup
-- Java RE Version 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+- Java RE Version 11: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
 - Gradle Version: https://gradle.org/releases/
 - Visual Studio Code: https://code.visualstudio.com/download
 
 # Steps
 
-Next steps help to build an contribute the *Fibonacci* application.
+Next steps help to build the *Fibonacci* application.
 
 ## 1. Fork the application
 
@@ -55,22 +55,17 @@ The layers are shown on the next diagram.
 
 ![Layers](https://www.plantuml.com/plantuml/png/PL51Jp8n4BttLxmioHSsNwhHen4b63NUzKICAMLO6ifqRRiIGlZlpi82oTf3--RrpRpfT9ooYRbPUnN9PiEL9nGlRXROMEkGAUK2WytI2Lg75M6d573HJYSnR195tF-R7T739qn25xJYwSVRWMeS1bNmSw5gOrUc4gV5oKcRkXOZxwfbdlcczS5X3KiKhy_lk3vB7tcquttHblnkA6w_YETrS9mnM4jHpgPBdJu5pZ5uJn7UR2aUsh1dyYIRDCanfGHf-CTP4jaPTvgUaTP_orm8kUwbSyY4sBxj3eiXbnYr1pHkIlplu6qfuhrIECqEUXusV2Lp4rBsOwo7lMRKNeq5onV-0W00)
 
-### 2.1. Create a Controller layer
+### 2.1. Modify the Controller layer
 
 In Spring's approach to building web sites, HTTP requests are handled by a controller. You
 can easily identify the controller by the `@RestController` annotation. 
 
 ```
-@RestController
-@RequestMapping("/")
-public class FibonacciController {
-
-...
-
-@GetMapping(value = "fibonacci")
-    public Integer getFibonacci(@RequestParam Integer n) {
-    ...
-    }
+@GetMapping(value = ["fibonacci"])
+open fun fibonacci(@RequestParam n: Int): Int? {
+   // TODO - If n is greater than 46 then return BAD REQUEST use HttpStatus
+   return fibonacciService?.fibonacci(n)
+}
 ```
 
 This controller is concise and simple, but there is plenty going on. We break it down step
@@ -83,9 +78,20 @@ The `@RequestParam` binds the value of the query string parameter `n` into
 the `n` parameter of the `fibonacci()` method. This query string parameter is 
 `required`.
 
-### 2.2. Create Service Layer
+The point is that the controller layer call the service layer and return the business result of fibonacci calculation.
 
-In Spring's approach to build business tier is used with `@Component` or `@Service` annotations. In business funtion should be implement the above mentioned Fibonacci number service, that return the n. Fibonacci number.
+### 2.2. Modify Service Layer
+
+Service layer are placed under service package. In Spring's approach to build business tier is used with `@Component` or `@Service` annotations. In business function should be implemented the above-mentioned Fibonacci number service, that return the n. Fibonacci number.
+
+Implement the Fibonacci algorithm under the next code:
+
+```
+fun fibonacci(n: Int): Int {
+    return if (n == 1) 0
+    else 0 // TODO instead of this logic implement fibonacci
+}
+```
 
 ## 2.3. Run the Application
 
