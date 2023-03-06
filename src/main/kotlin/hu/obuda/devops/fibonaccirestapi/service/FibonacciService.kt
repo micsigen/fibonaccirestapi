@@ -10,7 +10,6 @@ class FibonacciService {
 
         if(n>46)
             throw IndexOutOfBoundsException();
-
         return if (n <= 1) n
         else return fibonacci(n-1)+fibonacci(n-2)
     }
