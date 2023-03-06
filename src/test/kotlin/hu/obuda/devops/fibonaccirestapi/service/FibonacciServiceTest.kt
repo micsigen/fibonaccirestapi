@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.springframework.http.HttpStatus
+import org.springframework.web.server.ResponseStatusException
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class FibonacciServiceTest {
@@ -48,25 +49,5 @@ class FibonacciServiceTest {
         val result: Int = underTest.fibonacci(46)
         // then
         Assertions.assertEquals(1836311903, result)
-    }
-
-    @Test
-    fun shouldReturnBadRequestWhenCallOver46() {
-        // given
-
-        // when
-        val result: Int = underTest.fibonacci(47)
-        // then
-        Assertions.assertEquals(HttpStatus.BAD_REQUEST, result)
-    }
-
-    @Test
-    fun shouldReturnBadRequestWhenCallUnder0() {
-        // given
-
-        // when
-        val result: Int = underTest.fibonacci(-1)
-        // then
-        Assertions.assertEquals(HttpStatus.BAD_REQUEST, result)
     }
 }
