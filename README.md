@@ -144,4 +144,4 @@ void callFibonacciEndpoint() {
 ### 3.3. Manual test
 
 Now that the web site is running, visit `http://localhost:8080/fibonacci?n=10`, where you should
-see "54"
+see "55"
