@@ -27,12 +27,14 @@ class FibonacciServiceTest {
     }
 
     @Test
-    fun shouldReturn0WhenCallSmllEqu0() {
-
+    fun shouldReturn0WhenCall0() {
         var result: Int = underTest.fibonacci(0)
         Assertions.assertEquals(0, result);
+    }
 
-        result = underTest.fibonacci(-1)
+    @Test
+    fun shouldReturn0WhenCallMinus() {
+        var result: Int = underTest.fibonacci(-1)
         Assertions.assertEquals(0, result);
     }
 }
