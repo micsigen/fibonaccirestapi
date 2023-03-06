@@ -19,7 +19,7 @@ class FibonacciServiceTest {
     }
 
     @Test
-    fun Fibonacci_Should_Return34() {
+    fun shouldReturn34WhenCall9() {
 
         val result: Int = underTest.fibonacci(9)
 
@@ -27,7 +27,7 @@ class FibonacciServiceTest {
     }
 
     @Test
-    fun Fibonacci_Should_Return0() {
+    fun shouldReturn0WhenCallSmllEqu0() {
 
         var result: Int = underTest.fibonacci(0)
         Assertions.assertEquals(0, result);
