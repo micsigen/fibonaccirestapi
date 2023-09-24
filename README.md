@@ -45,15 +45,29 @@ Next steps help to build the *Fibonacci* application.
 
 ![Click on fork button](resources/create.fork.png)
 
-4. Start the development to follow the next instructions. Happy coding!
-
-## 2. Develop Fibonacci application
-
-The layers are shown on the next diagram.
+4. The layers are shown on the next diagram.
 
 ![Layers](https://www.plantuml.com/plantuml/png/PL51Jp8n4BttLxmioHSsNwhHen4b63NUzKICAMLO6ifqRRiIGlZlpi82oTf3--RrpRpfT9ooYRbPUnN9PiEL9nGlRXROMEkGAUK2WytI2Lg75M6d573HJYSnR195tF-R7T739qn25xJYwSVRWMeS1bNmSw5gOrUc4gV5oKcRkXOZxwfbdlcczS5X3KiKhy_lk3vB7tcquttHblnkA6w_YETrS9mnM4jHpgPBdJu5pZ5uJn7UR2aUsh1dyYIRDCanfGHf-CTP4jaPTvgUaTP_orm8kUwbSyY4sBxj3eiXbnYr1pHkIlplu6qfuhrIECqEUXusV2Lp4rBsOwo7lMRKNeq5onV-0W00)
 
-### 2.1. Modify the Controller layer
+5. Start the development to follow the next instructions. Happy coding!
+
+## 2. Develop Fibonacci application
+
+## 2.1. Run the Application
+
+After you complete the task you can run the application with the next *Gradle* command.
+
+```
+./gradlew.bat bootRun
+```
+
+Or
+
+with IntelliJ, start the application on gradle panel.
+
+![Layers](resources/intellij.start.png)
+
+### 2.2. Modify the Controller layer
 
 In Spring's approach to building web sites, HTTP requests are handled by a controller. You
 can easily identify the controller by the `@RestController` annotation. 
@@ -78,7 +92,7 @@ the `n` parameter of the `fibonacci()` method. This query string parameter is
 
 The point is that the controller layer call the service layer and return the business result of fibonacci calculation.
 
-### 2.2. Modify Service Layer
+### 2.3. Modify Service Layer
 
 Service layer are placed under service package. In Spring's approach to build business tier is used with `@Component` or `@Service` annotations. In business function should be implemented the above-mentioned Fibonacci number service, that return the n. Fibonacci number.
 
@@ -90,20 +104,6 @@ fun fibonacci(n: Int): Int {
     else 0 // TODO instead of this logic implement fibonacci
 }
 ```
-
-## 2.3. Run the Application
-
-After you complete the task you can run the application with the next *Gradle* command.
-
-```
-./gradlew.bat bootRun
-```
-
-Or
-
-with IntelliJ, start the application on gradle panel.
-
-![Layers](resources/intellij.start.png)
 
 ## 3. Test the Application
 
