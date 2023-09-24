@@ -27,10 +27,8 @@ f(6) = 8
 
 # What You Need
 
-- Create a GitHub account if you do not have yet: https://github.com/signup
-- Java RE Version 11: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
-- Gradle Version: https://gradle.org/releases/
-- Visual Studio Code: https://code.visualstudio.com/download
+- Create a GitHub account if you do not have yet: https://github.com/signup.
+- IntelliJ that already installed on your workstation.
 
 # Steps
 
@@ -101,6 +99,12 @@ After you complete the task you can run the application with the next *Gradle* c
 ./gradlew.bat bootRun
 ```
 
+Or
+
+with IntelliJ, start the application on gradle panel.
+
+![Layers](resources/intellij.start.png)
+
 ## 3. Test the Application
 
 Following the guideline test the application with two aspects
@@ -143,5 +147,5 @@ void callFibonacciEndpoint() {
 
 ### 3.3. Manual test
 
-Now that the web site is running, visit `http://localhost:8080/fibonacci?n=10`, where you should
+Now that, open with your browser the next site `http://localhost:8080/fibonacci?n=10`, where you should
 see "55"
