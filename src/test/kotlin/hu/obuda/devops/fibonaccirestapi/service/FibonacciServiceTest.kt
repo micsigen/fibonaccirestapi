@@ -3,6 +3,7 @@ package hu.obuda.devops.fibonaccirestapi.service
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
+import org.springframework.http.HttpStatus
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class FibonacciServiceTest {
@@ -18,5 +19,24 @@ class FibonacciServiceTest {
         Assertions.assertEquals(0, result)
     }
 
-    // TODO - Test with greater numbers and test edge cases
+
+    @Test
+    fun shouldReturn55() {
+        // given
+
+        // when
+        val result: Int = underTest.fibonacci(10)
+        // then
+        Assertions.assertEquals(55, result)
+    }// TODO - Test with greater numbers and test edge cases
+
+    @Test
+    fun shouldReturn47() {
+        // given
+
+        // when
+        val result: Int = underTest.fibonacci(47)
+        // then
+        Assertions.assertEquals(-1323752223, result)
+    }
 }
