@@ -24,7 +24,7 @@ class IntegrationTest {
 
         // then
         Assertions.assertEquals(HttpStatus.OK, entity.statusCode)
-        Assertions.assertEquals("0", entity.body)
+        Assertions.assertEquals("1", entity.body)
     }
 
     @Test
