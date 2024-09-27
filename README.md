@@ -101,13 +101,21 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-## 3. Test the Application
+### 3. Try to solve the task using an AI assistant, such as Codeium, at the end.
+
+Codeium can be utilized for code generation, helping to streamline the development process and improve efficiency.
+
+Using Codeium integrated within IntelliJ for enhanced code generation:
+
+![AI Assistant](resources/using_codeium.png)
+
+## 4. Test the Application
 
 Follow the guidelines below to test the application from two perspectives:
 - *Unit tests*: Test the service layer, including normal cases (`f(1)`, `f(2)`, ...) and edge cases (like `f(-1)`).
 - *Integration tests*: Test the controller layer in conjunction with the service layer, including edge cases such as `f(47)`.
 
-### 3.1. Unit tests
+### 4.1. Unit tests
 
 Here’s an example of how to write a unit test using *JUnit*:
 
@@ -123,7 +131,7 @@ void shouldReturn0WhenCall1() {
 }
 ```
 
-### 3.2. Integration tests
+### 4.2. Integration tests
 
 Here’s an example of how to test the controller layer with *JUnit*:
 
@@ -141,6 +149,7 @@ void callFibonacciEndpoint() {
 }
 ```
 
-### 3.3. Manual test
+### 4.3. Manual test
 
 Finally, open your browser and navigate to http://localhost:8080/fibonacci?n=10, where you should see “55”.
+
