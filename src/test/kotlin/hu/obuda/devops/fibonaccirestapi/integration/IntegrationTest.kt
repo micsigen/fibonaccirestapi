@@ -44,6 +44,7 @@ class IntegrationTest {
 
         // then
         Assertions.assertNotNull(thrown)
+        Assertions.assertEquals(HttpStatus.BAD_REQUEST, thrown)
     }
 
 }

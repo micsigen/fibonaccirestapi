@@ -8,4 +8,6 @@ class FibonaccirestapiApplication
 
 fun main(args: Array<String>) {
 	runApplication<FibonaccirestapiApplication>(*args)
+
 }
+
