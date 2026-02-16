@@ -28,7 +28,7 @@ f(6) = 8
 # What You Need
 
 - A GitHub account. If you don’t have one, you can sign up here: https://github.com/signup.
-- IntelliJ installed on your machine.
+- IDEA IntelliJ Community Edition installed on your machine. Download from https://download.jetbrains.com/idea/ideaIC-2024.2.6.exe
 
 # Steps
 
