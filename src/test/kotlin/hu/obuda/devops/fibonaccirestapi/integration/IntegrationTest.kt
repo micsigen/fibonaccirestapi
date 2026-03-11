@@ -28,6 +28,21 @@ class IntegrationTest {
     }
 
     @Test
+    fun callFibonacciEndpoint2() {
+        // given
+
+        // when
+        val entity = restTemplate.getForEntity(
+            "http://localhost:8080/fibonacci?n=46",
+            String::class.java
+        )
+
+        // then
+        Assertions.assertEquals(HttpStatus.OK, entity.statusCode)
+        Assertions.assertEquals("1836311903", entity.body)
+    }
+
+    @Test
     @Throws(Exception::class)
     fun callFibonacciEndpointWithInvalid() {
         // given
